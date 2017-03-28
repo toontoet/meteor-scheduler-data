@@ -96,6 +96,9 @@ function CollectionPerformer(collection) {
         if(event.id.indexOf("#") + 1)
             return false;
 
+        if (event.event_length) 
+            event.event_length = parseInt(event.event_length);
+
         var savedEventData = this.findEvent(event.id);
         if(savedEventData)
             collection.update({_id: savedEventData._id}, {$set: event});
