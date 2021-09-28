@@ -165,7 +165,8 @@ function initSchedulerMeteor(scheduler) {
     scheduler.meteorStop = meteorStop;
 }
 
-if(window.Scheduler) {
+//if(window.Scheduler) {
+if(false) {
     Scheduler.plugin(function(scheduler) {
         initSchedulerMeteor(scheduler);
     });
